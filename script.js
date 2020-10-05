@@ -5,7 +5,6 @@ const api = "https://pokeapi.co/api/v2/pokemon?limit=150";
 
 /**
  * Try to parse a response as JSON data
- * @param {Response} response - API fetch response
  */
 function transformToJson (response) {
     if (response.ok) {
@@ -16,45 +15,49 @@ function transformToJson (response) {
 }
 
 /**
- * fill the item list with values
- * @param {Object} json - Some JSON formatted data
+ * Clear the list of all its items
  */
-function fillList (json) {
-    // Empty the list
-    list.innerHTML = "";
-    json.results.forEach((pokemon) => {
-        // Create a li tag
-        const item = document.createElement("li");
-        // Create a img tag
-        const image = new Image();
-        // Fetch the individual url to have the image
-        fetch(pokemon.url).then(transformToJson).then((info) => {
-            // Set the img url
-            image.src = info.sprites.front_default;
-            // Add the click event
-            item.addEventListener("click",  () => fillDescription(info));
-        });
-        // Put the image into the item
-        item.appendChild(image);
-        // Put the item into the list
-        list.appendChild(item);
-    });
-}
-
-// Show or hide the description box
-function showDescription () {
-    description.classList.add("show");
-}
-function hideDescription () {
-    description.classList.remove("show");
+function emptyList () {
+    // ...
 }
 
 /**
- * Fill the description box with values
- * @param {Object} json - Some JSON formatted data
+ * Create an item, fetch its data and setup event listener
  */
-function fillDescription (json) {
+function createItem (pokemon) {
+    // Create a li tag
+    const item = document.createElement("li");
     // ...
+    fetch(pokemon.url).then(transformToJson).then((data) => {
+        // ...
+    });
+}
+
+/**
+ * fill the item list with values
+ */
+function fillList (json) {
+    emptyList();
+    json.results.forEach(createItem);
+}
+
+/**
+ * Fill and display the description
+ */
+function showDescription (data) {
+    description.classList.add("show");
+
+    const fields = description.querySelectorAll("dd");
+    fields.forEach((dd) => {
+        // ...
+    });
+}
+
+/**
+ * Hide the description
+ */
+function hideDescription () {
+    description.classList.remove("show");
 }
 
 // Fetch the API end-point and fill the list

@@ -1,4 +1,4 @@
-# pokedex
+# Pokedex
 
 Base pour la création d'un pokédex interactif.
 

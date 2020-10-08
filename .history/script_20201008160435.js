@@ -26,15 +26,12 @@ function emptyList () {
  */
 function createItem (pokemon) {
     const item = document.createElement("li"); // CREATION ITEM  
-    const photo = document.createElement("img"); // CREATION PHOTO
-    
-    fetch(pokemon.url).then(transformToJson).then((data) => {// ON RECUP LES DONNEES DE L'API    
+    fetch(pokemon.url).then(transformToJson).then((data) => {// ON RECUP LES DONNEES DE L'API
+        // remplir item       
+        //item.text = data.cesuetuveux
         list.appendChild(item); // on intègre le "item"(=li) dans la "list"(=ul). Ne pas oublier de les déclarer avant si ce n'est pas fait. 
-        item.textContent=data.name + data.id; // on intègre le fichier data -> name de l'API directement dans le "item" (donc dans le <li>)
-        item.appendChild(photo);
-        photo.src = data.sprites.front_shiny;
-        
         console.log(data);
+        item.textContent=data.name; // on intègre 
     });
     
 }

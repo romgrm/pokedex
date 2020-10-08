@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pokédex</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body>
+        <h1>Pokédex</h1>
+        <main>
+            <ul id="list"></ul>
+            <div id="description">
+                <button class="close">❌</button>
+                <dl>
+                    <dt>Name</dt>
+                    <dd class="name"> NOM</dd>
+                    <dt>ID</dt>
+                    <dd class="id"></dd>
+                    <dt>Poids</dt>
+                    <dd class="weight"></dd>
+                    <dt>Taille</dt>
+                    <dd class="height"></dd>
+                    <dt>Types</dt>
+                    <dd class="types"></dd>
+                </dl>
+            </div>
+        </main>
+        <script src="script.js"></script> <!--L'intérêt de mettre un script js à la fin permet de charger tout
+        ton site avant de charger ton .js, qui fait que l'utilisateur verra qlq chose dès le début. ça permet aussi 
+        de recup un élément si il est linker entre html/css -> js-->
+    </body>
+</html>

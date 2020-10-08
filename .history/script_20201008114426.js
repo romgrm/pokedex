@@ -27,10 +27,8 @@ function emptyList () {
 function createItem (pokemon) {
     const item = document.createElement("li"); // CREATION ITEM STOCKES DANS LE LI D'HTML 
     fetch(pokemon.url).then(transformToJson).then((data) => {
-        //console.log(data)       // ON RECUP LES DONNEES DE L'API
-        getElement("name").innerHTML = "name"+ data.name;
+        console.log(data)       // ON RECUP LES DONNEES DE L'API
     });
-
 }
 
 /**

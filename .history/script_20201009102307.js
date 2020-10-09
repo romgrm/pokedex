@@ -29,18 +29,17 @@ function createItem (pokemon) {
     const photo = document.createElement("img"); // CREATION PHOTO
     
     
-    
     fetch(pokemon.url).then(transformToJson).then((data) => {// ON RECUP LES DONNEES DE L'API    
         list.appendChild(item); // on intègre le "item"(=li) dans la "list"(=ul). Ne pas oublier de les déclarer avant si ce n'est pas fait. 
         item.textContent=data.name + data.id; // on intègre le fichier data -> name de l'API directement dans le "item" (donc dans le <li>)
         item.appendChild(photo);
         photo.src = data.sprites.front_shiny;
-         
 
-        item.addEventListener('mouseenter', fonction1)
+        /*item.addEventListener('mouseenter', fonction1)
         function fonction1(){
-            item.appendChild(description); 
-        }
+            item.textContent=data.name + data.id + data.height; 
+            photo.src = data.sprites.front_shiny; 
+        }*/
         
         /*item.addEventListener('mouseover', Fonction1);
         item.addEventListener('mouseout', Fonction2);
@@ -72,15 +71,12 @@ function fillList (json) {
  */
 function showDescription (data) {
     description.classList.add("show");
-    const fields = description.querySelectorAll("dd");
-    description.appendChild(fields);
-    
-      
-    fields.forEach((dd) => {
-       
-       fields.classList.textContent("name")=data.name;  
-      
+    const height=getElementsByClassName("height"); 
 
+    const fields = description.querySelectorAll("dd");
+    fields.forEach((dd) => {
+        item.appendChild(height); 
+        height.textContent= data.height; 
     });
 }
 

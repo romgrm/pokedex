@@ -35,11 +35,11 @@ function createItem (pokemon) {
         item.textContent=data.name + data.id; // on intègre le fichier data -> name de l'API directement dans le "item" (donc dans le <li>)
         item.appendChild(photo);
         photo.src = data.sprites.front_shiny;
-         
 
-        item.addEventListener('mouseenter', fonction1)
+        /*item.addEventListener('mouseenter', fonction1)
         function fonction1(){
-            item.appendChild(description); 
+            item.textContent=data.name + data.id + data.height; 
+            photo.src = data.sprites.front_shiny; 
         }
         
         /*item.addEventListener('mouseover', Fonction1);
@@ -73,14 +73,10 @@ function fillList (json) {
 function showDescription (data) {
     description.classList.add("show");
     const fields = description.querySelectorAll("dd");
-    description.appendChild(fields);
-    
-      
+    const height = description.querySelector("height"); 
     fields.forEach((dd) => {
-       
-       fields.classList.textContent("name")=data.name;  
-      
-
+        height.textContent=data.height; 
+        dd.appendChild(height); 
     });
 }
 

@@ -73,13 +73,13 @@ function fillList (json) {
 function showDescription (data) {
     description.classList.add("show");
     const fields = description.querySelectorAll("dd");
-    description.appendChild(fields);
+    //const name = getElementsByClassName("name");
     
       
     fields.forEach((dd) => {
        
-       fields.classList.textContent("name")=data.name;  
-      
+       dd[0].textContent=data.name; 
+       dd.appendChild(name); 
 
     });
 }

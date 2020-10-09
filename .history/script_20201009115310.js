@@ -73,11 +73,11 @@ function fillList (json) {
 function showDescription (data) {
     description.classList.add("show");
     const fields = description.querySelectorAll("dd");
-    description.appendChild(fields);
+    
     
       
     fields.forEach((dd) => {
-       
+       show.appendChild(dd);
        fields.classList.textContent("name")=data.name;  
       
 

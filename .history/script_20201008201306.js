@@ -1,7 +1,7 @@
 const list = document.getElementById("list"); // recup l'élément css list
 const description = document.getElementById("description"); // recup l'élément html description
 
-const api = "https://pokeapi.co/api/v2/pokemon?limit=5"; // url de l'api 
+const api = "https://pokeapi.co/api/v2/pokemon?limit=150"; // url de l'api 
 
 /**
  * Try to parse a response as JSON data
@@ -29,32 +29,16 @@ function createItem (pokemon) {
     const photo = document.createElement("img"); // CREATION PHOTO
     
     
-    
     fetch(pokemon.url).then(transformToJson).then((data) => {// ON RECUP LES DONNEES DE L'API    
         list.appendChild(item); // on intègre le "item"(=li) dans la "list"(=ul). Ne pas oublier de les déclarer avant si ce n'est pas fait. 
         item.textContent=data.name + data.id; // on intègre le fichier data -> name de l'API directement dans le "item" (donc dans le <li>)
         item.appendChild(photo);
         photo.src = data.sprites.front_shiny;
-         
 
-        item.addEventListener('mouseenter', fonction1)
-        function fonction1(){
-            item.appendChild(description); 
-        }
-        
-        /*item.addEventListener('mouseover', Fonction1);
-        item.addEventListener('mouseout', Fonction2);
-        function Fonction1(){
-            item.textContent=data.height + data.stats;
-            this.style.backgroundColor = 'orange'; 
-        }
-        function Fonction2(){
-            item.textContent=data.name + data.id; 
-            this.style.backgroundColor = '';
-        }*/
+        item.style.backgroundColor=blue; 
         
         console.log(data);
-    }); 
+    });
     
 }
 
@@ -72,15 +56,10 @@ function fillList (json) {
  */
 function showDescription (data) {
     description.classList.add("show");
-    const fields = description.querySelectorAll("dd");
-    description.appendChild(fields);
-    
-      
-    fields.forEach((dd) => {
-       
-       fields.classList.textContent("name")=data.name;  
-      
 
+    const fields = description.querySelectorAll("dd");
+    fields.forEach((dd) => {
+        // ...
     });
 }
 

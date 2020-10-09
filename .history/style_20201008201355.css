@@ -1,0 +1,13 @@
+#list {
+    gap: 20px;
+    background-color: red;
+}
+#list li {
+    cursor: pointer; /* petit doigt à la place du pointer de la souris */
+}
+#list li:hover {
+}
+
+#description {
+    display: none;
+}

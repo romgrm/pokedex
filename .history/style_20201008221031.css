@@ -1,0 +1,30 @@
+#list {
+    
+    background-color: red;
+}
+#list li {
+    cursor: pointer; /* petit doigt à la place du pointer de la souris */
+    color: blue;
+    gap: 20px;
+    border: solid 5px;
+    margin-bottom: 20px;
+    
+
+}
+
+#list li:hover{
+    padding-bottom: 50px;
+}
+#list li:hover {
+    /*zoom: 10%;*/
+}
+
+#description:hover {
+    display: list-item;
+    background-color: blue; 
+}
+/*
+#photo{
+    position: absolute;
+    left: 500px;
+}*/

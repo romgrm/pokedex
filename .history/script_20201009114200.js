@@ -53,7 +53,7 @@ function createItem (pokemon) {
             this.style.backgroundColor = '';
         }*/
         
-        console.log(data);
+        //console.log(data);
     }); 
     
 }
@@ -73,13 +73,13 @@ function fillList (json) {
 function showDescription (data) {
     description.classList.add("show");
     const fields = description.querySelectorAll("dd");
-    description.appendChild(fields);
+    //const name = getElementsByClassName("name");
     
       
     fields.forEach((dd) => {
        
-       fields.classList.textContent("name")=data.name;  
-      
+       fields[0].textContent=data.name; 
+      console.log(fields); 
 
     });
 }

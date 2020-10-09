@@ -31,7 +31,6 @@
     color: green; 
 }
 #description{
-    background-color: blue; 
     /*display: none;*/ 
 }
 #description:hover {
@@ -43,8 +42,3 @@
     position: absolute;
     left: 500px;
 }*/
-
-dd{
-    background-color: purple;
-    margin: 10px;
-}

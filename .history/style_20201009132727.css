@@ -1,0 +1,50 @@
+#list {
+    
+    background-color: rgb(204, 146, 146);
+}
+#list li {
+    cursor: pointer; /* petit doigt à la place du pointer de la souris */
+    color: rgb(180, 180, 224);
+    gap: 20px;
+    border: solid 1px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    
+
+}
+
+#list li:hover{
+    padding-bottom: 50px;
+    transition: transform .5s ease;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #303952;
+    transform: scale(1.02);
+    
+}
+#list li:hover {
+    /*zoom: 10%;*/
+}
+
+#name{
+    color: green; 
+}
+#description{
+    background-color: blue; 
+    /*display: none;*/ 
+}
+#description:hover {
+    /*display: list-item;
+    background-color: blue; */
+}
+/*
+#photo{
+    position: absolute;
+    left: 500px;
+}*/
+
+/*dd{
+    background-color: purple;
+    margin: 10px;
+}*/

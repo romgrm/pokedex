@@ -62,16 +62,16 @@ dd{
 
 
 #description{
-   display: none; 
+    position: fixed;
+   
 }
 
 
 #description:hover{
-    display: flex;
+    display: inline;
     background-color: rgb(58, 103, 146); 
     
 }
-
 
 
 

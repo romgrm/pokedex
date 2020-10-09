@@ -1,56 +1,23 @@
-
-
-body{
-    background: linear-gradient(180deg, #81ecec,#dfe6e9);
-}
-
-h1{
-    text-align: center;
-}
-
-
-
-.name{
-    font-size: 30px;
-}
-
-img{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    background-color: rgba(255, 255, 255);
-     
-}
-
-dt{
-    color: rgb(201, 201, 201);
-    text-align: left; 
-}
-
-dd{
-    text-align: left;
-    color: rgb(255, 188, 126); 
-}
-
-
-#list{
+#list {
     
     /*background-color: rgb(204, 146, 146);*/
 }
-
 #list li {
     cursor: pointer; /* petit doigt à la place du pointer de la souris */
-    background-color:  rgba(250, 114, 23);
+    color: rgb(180, 180, 224);
     gap: 20px;
-    margin: 10px 10px; 
+    border: solid 1px;
+    margin-bottom: 20px;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style-type: none;
     display: inline-block; 
     border-radius: 10px; 
     text-align: center; 
-}
 
+    
+
+}
 
 #list li:hover{
     padding-bottom: 50px;
@@ -58,32 +25,39 @@ dd{
     border-radius: 10px;
     box-shadow: 0px 0px 15px #303952;
     transform: scale(1.02);
+
+#name{
+    color: green; 
 }
-
-
-#description{
-   display: none; 
-}
-
-
 #description:hover{
-    display: flex;
     background-color: rgb(58, 103, 146); 
-    
+    display: inline;
+}
+#description:hover {
+    /*display: list-item;
+    background-color: blue; */
 }
 
+#description dt{
+    margin: 10px;
+    text-align: left;
+}
+/*
+#photo{
+    position: absolute;
+    left: 500px;
+}*/
 
+/*dd{
+    background-color: purple;
+    margin: 10px;
+}*/
 
+button{
+    display:none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.close{
+    display: none;
+}
 

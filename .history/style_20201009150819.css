@@ -1,7 +1,6 @@
-
-
 body{
-    background: linear-gradient(180deg, #81ecec,#dfe6e9);
+    /*background: linear-gradient(180deg, #2d3436,#81ecec);*/
+    background-color: #dfe6e9; 
 }
 
 h1{
@@ -61,19 +60,16 @@ dd{
 }
 
 
+
 #description{
-   display: none; 
+    display: none; 
 }
 
-
 #description:hover{
-    display: flex;
+    display: inline;
     background-color: rgb(58, 103, 146); 
     
 }
-
-
-
 
 
 

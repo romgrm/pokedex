@@ -61,17 +61,17 @@ dd{
 }
 
 
-#description{
-   display: none; 
+main{
+   display: flex; 
 }
 
 
-#description:hover{
+
+#main:hover{
     display: flex;
     background-color: rgb(58, 103, 146); 
     
 }
-
 
 
 

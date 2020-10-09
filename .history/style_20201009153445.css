@@ -62,8 +62,9 @@ dd{
 
 
 #description{
-   display: none; 
+   display: hideDescription; 
 }
+
 
 
 #description:hover{
@@ -71,7 +72,6 @@ dd{
     background-color: rgb(58, 103, 146); 
     
 }
-
 
 
 

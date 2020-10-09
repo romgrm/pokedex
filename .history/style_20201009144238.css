@@ -1,14 +1,13 @@
 
 
-body{
-    background: linear-gradient(180deg, #81ecec,#dfe6e9);
+dt{
+    color: red;
+    text-align: left; 
 }
 
-h1{
-    text-align: center;
+dd{
+    text-align: left;
 }
-
-
 
 .name{
     font-size: 30px;
@@ -18,29 +17,22 @@ img{
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(0,0,0,0.8);
      
 }
 
-dt{
-    color: rgb(201, 201, 201);
-    text-align: left; 
-}
-
-dd{
-    text-align: left;
-    color: rgb(255, 188, 126); 
+body{
+    background: linear-gradient(70deg, rgb(239,246,250), rgb(240,211,227));
 }
 
 
-#list{
+#list {
     
     /*background-color: rgb(204, 146, 146);*/
 }
-
 #list li {
     cursor: pointer; /* petit doigt à la place du pointer de la souris */
-    background-color:  rgba(250, 114, 23);
+    background-color:  rgb(204, 230, 245);
     gap: 20px;
     margin: 10px 10px; 
     font-size: 20px;
@@ -49,8 +41,10 @@ dd{
     display: inline-block; 
     border-radius: 10px; 
     text-align: center; 
-}
 
+    
+
+}
 
 #list li:hover{
     padding-bottom: 50px;
@@ -60,26 +54,14 @@ dd{
     transform: scale(1.02);
 }
 
-
 #description{
-   display: none; 
+    display: none; 
 }
-
 
 #description:hover{
-    display: flex;
     background-color: rgb(58, 103, 146); 
-    
+    display: inline;
 }
-
-
-
-
-
-
-
-
-
 
 
 

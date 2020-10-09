@@ -1,7 +1,5 @@
-
-
 body{
-    background: linear-gradient(180deg, #81ecec,#dfe6e9);
+    background: linear-gradient(180deg, #2d3436,#81ecec, 0.2);
 }
 
 h1{
@@ -18,7 +16,7 @@ img{
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(0,0,0,0.05);
      
 }
 
@@ -40,7 +38,7 @@ dd{
 
 #list li {
     cursor: pointer; /* petit doigt à la place du pointer de la souris */
-    background-color:  rgba(250, 114, 23);
+    background-color:  rgba(209, 133, 82, 0.2);
     gap: 20px;
     margin: 10px 10px; 
     font-size: 20px;
@@ -61,19 +59,16 @@ dd{
 }
 
 
+
 #description{
-   display: none; 
+    display: none; 
 }
 
-
 #description:hover{
-    display: flex;
+    display: inline;
     background-color: rgb(58, 103, 146); 
     
 }
-
-
-
 
 
 

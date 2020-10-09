@@ -46,7 +46,7 @@ function createItem (pokemon) {
         
         item.addEventListener('mouseleave', remove1);
         function remove1(){ 
-            hideDescription("show"); 
+            //hideDescription("show"); 
             item.removeChild(description);  
         }
         
@@ -74,21 +74,9 @@ function showDescription (data) {
     
       
     fields.forEach((dd) => {
-            
-        dd.textContent = data[dd.classList[0]];  // on recupere notre chemin dans l'API des données et one le stock ds notre "dd" les données non egales à "types"
-
-      /* if(dd.classList[0] != "types"){
-        dd.textContent = data[dd.classList[0]];  // on recupere notre chemin dans l'API des données et one le stock ds notre "dd" les données non egales à "types"
-   }else{
-       dd.textContent = " "; 
-       data.types.forEach((type) => {          // les données = types sont stockées dans un nouveau "dd"(qui a deja les autres données), et on change le chemin pour venir chercher les données "types"
-           if(type.name > 1){
-               dd.textContent +=type.type.name;
-           }else{                                       
-               dd.textContent += type.type.name+" "; // ici on reprend le "dd" avec toutes les données + 1 données type, auquel on rajoute encore 1 données type, pour les pokémons qui ont plusieurs types
-           }
-       }
-   }*/
+       
+       dd.textContent = data[dd.classList[0]];  
+      
 
     });
 }

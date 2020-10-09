@@ -63,15 +63,15 @@ dd{
 
 #description{
    display: none; 
+   
 }
 
 
 #description:hover{
-    display: flex;
+    display: inline;
     background-color: rgb(58, 103, 146); 
     
 }
-
 
 
 

@@ -1,5 +1,3 @@
-
-
 body{
     background: linear-gradient(180deg, #81ecec,#dfe6e9);
 }
@@ -61,19 +59,19 @@ dd{
 }
 
 
-#description{
-   display: none; 
-}
+
 
 
 #description:hover{
-    display: flex;
+    display: inline;
     background-color: rgb(58, 103, 146); 
     
 }
 
-
-
+#description{
+    position: fixed;
+    display: none; 
+}
 
 
 

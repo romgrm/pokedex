@@ -1,7 +1,7 @@
 const list = document.getElementById("list"); // recup l'élément css list
 const description = document.getElementById("description"); // recup l'élément html description
 
-const api = "https://pokeapi.co/api/v2/pokemon?limit=150"; // url de l'api 
+const api = "https://pokeapi.co/api/v2/pokemon?limit=20"; // url de l'api 
 
 /**
  * Try to parse a response as JSON data
@@ -69,31 +69,29 @@ function fillList (json) {
  */
 function showDescription (data) {
     description.classList.add("show");
-    const fields = description.querySelectorAll("dd"); // recup les <dd> de html
-    const types = description.querySelectorAll(".types"); // recup la class "types" de html 
-     
+    const fields = description.querySelectorAll("dd");
     
     
       
     fields.forEach((dd) => {
-         // recup data name/height/id... (sans types)   
-        dd.textContent = data[dd.classList[0]]; 
+            
+        dd.textContent = data[dd.classList[0]];  // on recupere notre chemin dans l'API des données et one le stock ds notre "dd" les données non egales à "types"
+
+      /* if(dd.classList[0] != "types"){
+        dd.textContent = data[dd.classList[0]];  // on recupere notre chemin dans l'API des données et one le stock ds notre "dd" les données non egales à "types"
+   }else{
+       dd.textContent = " "; 
+       data.types.forEach((type) => {          // les données = types sont stockées dans un nouveau "dd"(qui a deja les autres données), et on change le chemin pour venir chercher les données "types"
+           if(type.name > 1){
+               dd.textContent +=type.type.name;
+           }else{                                       
+               dd.textContent += type.type.name+" "; // ici on reprend le "dd" avec toutes les données + 1 données type, auquel on rajoute encore 1 données type, pour les pokémons qui ont plusieurs types
+           }
+       }
+   }*/
+
     });
-
-
-        //recup data de types
-    types.forEach((types) => {
-            if(data.types.length < 2){ 
-            types.textContent = data.types[0].type.name; // ceux qui ont qu'1 type
-        }else{
-            types.textContent = data.types[0].type.name + " " + data.types[1].type.name; // pour ceux qui ont 2 types
-        } 
-    
-    });  
 }
-
-
-
 
 /**
  * Hide the description
